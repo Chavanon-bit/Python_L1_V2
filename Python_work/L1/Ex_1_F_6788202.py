@@ -7,7 +7,6 @@ Date of work: January 9, 2026
 """
 
 # TASK 1.1
-#Your_code_here
 students = {
  'Alice': 82,
  'Bob': 67,
@@ -22,7 +21,7 @@ for scores in students.values():
   if scores >= 70:
     count += 1
 
-print(count)
+print("Number of student who passed: ", (count))
 
 
 
