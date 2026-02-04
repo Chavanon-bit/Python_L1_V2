@@ -1,0 +1,81 @@
+// ----------------------
+// GIVEN DATA (DO NOT MODIFY)
+// ----------------------
+const wizards = [
+  { id: "HP001", name: "Harry", house: "Gryffindor", events: [10, -5, 15, 20] },
+  { id: "HG002", name: "Hermione", house: "Gryffindor", events: [20, 20, 10, 15] },
+  { id: "RW003", name: "Ron", house: "Gryffindor", events: [5, 0, -10, 10] },
+  { id: "DM004", name: "Draco", house: "Slytherin", events: [10, 10, 20, 5] },
+  { id: "PP005", name: "Pansy", house: "Slytherin", events: [5, -5, 10, 10] },
+  { id: "LL006", name: "Luna", house: "Ravenclaw", events: [15, 10, 0, 10] },
+  { id: "CC007", name: "Cho", house: "Ravenclaw", events: [10, -5, 5, 5] },
+  { id: "NH008", name: "Neville", house: "Hufflepuff", events: [10, 10, 10, 20] },
+  { id: "CD009", name: "Cedric", house: "Hufflepuff", events: [20, 0, -10, -5] }
+];
+
+// ----------------------
+// Task 1
+// ----------------------
+console.log(wizards);
+
+var  totalPoints = 0;
+
+// ----------------------
+// Task 2
+// ----------------------
+wizards.forEach(i => {
+  i.events.forEach(j => {
+    totalPoints += j;
+  });
+
+  i['totalPoints'] = totalPoints; 
+  // console.log(i)
+  totalPoints = 0;
+
+});
+
+console.log(wizards)
+
+
+// ----------------------
+// Task 3
+// ----------------------
+  const houses = {
+       Gryffindor: { total: 0, count: 0 },
+       Slytherin: { total: 0, count: 0 },
+       Ravenclaw: { total: 0, count: 0 },
+       Hufflepuff: { total: 0, count: 0 },
+ };
+
+var total = 0;
+var count = 0; 
+
+wizards.forEach(i => {
+  houses[i.house].total += i.totalPoints;
+  houses[i.house].count += 1;
+});
+
+console.log(houses)
+
+// ----------------------
+// Task 4
+// ----------------------
+
+const students = [
+   { name: "Gryffindor", score: 110 },
+   { name: "Slytherin", score: 55 },
+   { name: "Ravenclaw", score: 50 },
+   { name: "Hufflepuff", score: 65 }
+ ];
+
+ const rank = wizards;
+ 
+ // Sort students by score (descending order)
+ students.sort((a, b) => b.score - a.score);
+
+ console.log(students)
+
+
+
+
+
